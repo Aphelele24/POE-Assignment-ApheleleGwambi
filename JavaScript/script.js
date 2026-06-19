@@ -102,7 +102,7 @@ document.getElementById('contactForm').addEventListener('submit', function(event
         };
 
         // Replace placeholders below with actual parameters from EmailJS dashboard if required
-        emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', templateParams)
+        emailjs.send('service_mqmx4p7', 'template_z22xxkz', templateParams)
             .then(function() {
                 submitBtn.textContent = "Message Sent!";
                 document.getElementById('contactForm').reset();
@@ -132,6 +132,9 @@ function clearValidationState(inputElement, errorElement) {
     errorElement.style.visibility = 'hidden';
 }
 // code for enquiry//
+(function() {
+    emailjs.init("eAkFkj8OQfkKGCdHj"); // <-- Replace with your actual Public Key
+})();
 
 document.addEventListener("DOMContentLoaded", function () {
     const form = document.getElementById("enquiry-form");
@@ -149,13 +152,12 @@ document.addEventListener("DOMContentLoaded", function () {
         const fname = document.getElementById("fname").value.trim();
         const email = document.getElementById("email").value.trim();
         const phone = document.getElementById("phone").value.trim();
-        const subject = document.getElementById("subject").value.trim();
         const message = document.getElementById("message").value.trim();
 
         // --- VALIDATION RULES ---
 
         // Check for empty fields
-        if (!fname || !email || !phone || !subject || !message) {
+        if (!fname || !email || !phone || !message) {
             statusDisplay.innerText = "Error: All fields are required.";
             statusDisplay.style.color = "red";
             return;

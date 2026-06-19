@@ -132,14 +132,20 @@ button {
   color: #777;
   margin-bottom: 30px;
 }
-
-/* Video container */
 .video-container {
+  width: 100%;
+  max-width: 900px;
+  margin: 40px auto;
+  overflow: hidden;
+  border-radius: 10px;
   position: relative;
-  max-width: 600px;
-  margin: 0 auto;
-  cursor: pointer;
-  height: auto;
+}
+
+.video-container video {
+  width: 100%;
+  height: 600px; /* 👈 controls how SHORT it is */
+  object-fit: cover; /* 👈 THIS MAKES IT WIDE */
+  display: block;
 }
 
 /* Video styling */
