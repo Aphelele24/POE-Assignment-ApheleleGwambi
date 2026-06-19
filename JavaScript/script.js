@@ -1,3 +1,19 @@
+// HOME PAGE
+// Get elements
+const video = document.getElementById("myVideo");
+const playBtn = document.getElementById("playBtn");
+const container = document.querySelector(".video-container");
+
+// ▶ Play video when clicking container
+container.addEventListener("click", () => {
+  video.play();
+  playBtn.style.display = "none";
+});
+
+// ⏸ Show play button again when paused
+video.addEventListener("pause", () => {
+  playBtn.style.display = "block";
+});
 // contact.js
 
 (function () {
@@ -166,7 +182,7 @@ document.addEventListener("DOMContentLoaded", function () {
         statusDisplay.style.color = "blue";
 
         // Replace 'YOUR_SERVICE_ID' and 'YOUR_TEMPLATE_ID' with your actual EmailJS configurations
-        emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', form)
+        emailjs.sendForm('service_mqmx4p7', 'template_z22xxkz', form)
             .then(function () {
                 statusDisplay.innerText = "Success! Your enquiry has been sent.";
                 statusDisplay.style.color = "green";

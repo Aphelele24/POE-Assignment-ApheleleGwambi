@@ -121,6 +121,57 @@ button {
     }
 
 }
+/* Section layout */
+.video-section {
+  text-align: center;
+  padding: 80px 20px;
+  background: #f9f9f9;
+}
+
+.subtitle {
+  color: #777;
+  margin-bottom: 30px;
+}
+
+/* Video container */
+.video-container {
+  position: relative;
+  max-width: 600px;
+  margin: 0 auto;
+  cursor: pointer;
+  height: auto;
+}
+
+/* Video styling */
+video {
+  width: 100%;
+  border-radius: 12px;
+}
+
+/* ▶ Play button overlay */
+.play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 50px;
+  color: white;
+  background: rgba(0,0,0,0.5);
+  border-radius: 50%;
+  padding: 10px 20px;
+}
+
+/* 🛍 Shop button */
+.shop-btn {
+  margin-top: 20px;
+  padding: 12px 25px;
+  border: none;
+  background: black;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
 
 
 
